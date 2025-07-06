@@ -79,14 +79,14 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
 
   return (
     <>
-      <header className={`${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/90 backdrop-blur-sm'} w-full py-2 transition-all duration-300 fixed top-0 left-0 right-0 z-50 border-b border-gray-100`}>
+      <header className={`${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/90 backdrop-blur-sm'} w-full py-2 transition-all duration-300 fixed top-0 left-0 right-0 z-50 border-b border-gray-100 overflow-visible`}>
         <div className="container-wide flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src={skillbantoLogo} 
               alt="SkillBanto" 
-              className="h-16 w-16 object-contain"
+              className="h-12 w-36 sm:h-14 sm:w-18 md:h-16 md:w-20 lg:h-16 lg:w-48 xl:h-16 xl:w-48 transition-all duration-300"
               style={{
                 filter: 'drop-shadow(0 0 0 transparent)',
                 mixBlendMode: 'multiply'
@@ -229,7 +229,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex items-center z-10"
+            className="md:hidden flex items-center z-10 mr-6"
             onClick={() => setMobileMenuOpen(true)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
