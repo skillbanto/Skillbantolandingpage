@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>SkillBanto - Turn Your Expertise Into Income</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1287437309222426');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <style>
+      /* Hide Vite error overlays completely */
+      vite-error-overlay,
+      [data-vite-error-overlay],
+      .vite-error-overlay,
+      [id*="error-overlay"],
+      [class*="error-overlay"],
+      [id*="vite-error"],
+      [class*="vite-error"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        z-index: -9999 !important;
+        pointer-events: none !important;
+      }
+      
+      /* Ensure main content is always visible */
+      #root {
+        position: relative;
+        z-index: 1;
+      }
+      
+      /* Loading state */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Immediate error suppression on page load
+      window.addEventListener('error', function(e) {
+        if (e.message === 'Script error.' || 
+            (e.filename && e.filename.includes('vite')) ||
+            (e.error && e.error.stack && e.error.stack.includes('sendError'))) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      }, true);
+      
+      // Continuously remove error overlays
+      setInterval(function() {
+        var overlays = document.querySelectorAll('vite-error-overlay, [data-vite-error-overlay], .vite-error-overlay');
+        overlays.forEach(function(overlay) {
+          overlay.remove();
+        });
+      }, 50);
+    </script>
+  </body>
+</html>

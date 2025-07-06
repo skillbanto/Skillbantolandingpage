@@ -1,0 +1,16 @@
+<svg width="150" height="40" viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- SkillBanto Triangle Logo - Based on provided image -->
+  <g transform="translate(10, 5)">
+    <!-- Outer triangle frame -->
+    <path d="M15 4 L26 22 L4 22 Z" fill="none" stroke="#10D97A" stroke-width="3"/>
+    <!-- Inner triangle -->
+    <path d="M15 10 L21 20 L9 20 Z" fill="none" stroke="#10D97A" stroke-width="2.5"/>
+    <!-- Innermost triangle -->
+    <path d="M15 14 L18 18 L12 18 Z" fill="#10D97A"/>
+  </g>
+  
+  <!-- SkillBanto Text -->
+  <text x="45" y="26" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#10D97A">
+    SkillBanto
+  </text>
+</svg>
