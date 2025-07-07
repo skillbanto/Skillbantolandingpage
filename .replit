@@ -1,5 +1,5 @@
 modules = ["nodejs-20", "bash", "web", "postgresql-16"]
-run = "npx serve -s dist/public -l 3000"
+run = "npx serve -s dist/public -l 5000"
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [nix]
@@ -7,12 +7,8 @@ channel = "stable-24_05"
 
 [deployment]
 deploymentTarget = "cloudrun"
-run = ["sh", "-c", "npx serve -s dist/public -l 3000"]
+run = ["sh", "-c", "npx serve -s dist/public -l 5000"]
 build = ["sh", "-c", "npm run build"]
-
-[[ports]]
-localPort = 3000
-externalPort = 3000
 
 [[ports]]
 localPort = 5000
@@ -46,5 +42,5 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npx serve -s dist/public -l 3000"
-waitForPort = 3000
+args = "npx serve -s dist/public -l 5000"
+waitForPort = 5000
