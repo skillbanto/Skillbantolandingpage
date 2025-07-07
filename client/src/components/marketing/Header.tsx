@@ -79,14 +79,14 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
 
   return (
     <>
-      <header className={`${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/90 backdrop-blur-sm'} w-full py-2 transition-all duration-300 fixed top-0 left-0 right-0 z-50 border-b border-gray-100 overflow-visible`}>
-        <div className="container-wide flex items-center justify-between">
+      <header className={`${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/90 backdrop-blur-sm'} w-full h-20 flex items-center transition-all duration-300 fixed top-0 left-0 right-0 z-50 border-b border-gray-100 overflow-visible`}>
+        <div className="container-wide flex items-center justify-between w-full">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src={skillbantoLogo} 
               alt="SkillBanto" 
-              className="h-12 w-36 sm:h-14 sm:w-18 md:h-16 md:w-20 lg:h-16 lg:w-48 xl:h-16 xl:w-48 transition-all duration-300"
+              className="h-8 w-40 sm:h-8 sm:w-40 md:h-8 md:w-40 lg:h-8 lg:w-40 xl:h-8 xl:w-48 transition-all duration-300 object-contain"
               style={{
                 filter: 'drop-shadow(0 0 0 transparent)',
                 mixBlendMode: 'multiply'
@@ -94,8 +94,8 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
             />
           </Link>
 
-          {/* Desktop Navigation - Kajabi Style */}
-          <nav className="hidden md:flex items-center space-x-6">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center space-x-6 mx-auto">
             {mainNavItems.map((item, index) => {
               const sectionId = item.href.split('#')[1] || "";
               const isActive = activeSection === sectionId;
@@ -208,7 +208,7 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
             })}
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Far Right */}
           <div className="hidden md:flex items-center space-x-3">
             <a
               href="https://app.skillbanto.org/login"
