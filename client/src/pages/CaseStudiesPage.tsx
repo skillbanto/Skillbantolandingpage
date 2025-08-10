@@ -322,7 +322,7 @@ export default function CaseStudiesPage() {
               </motion.p>
 
               <motion.a
-                href="https://app.skillbanto.org/creator-registration"
+                href="https://app.skillbanto.com/creator-registration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 hover:scale-105"

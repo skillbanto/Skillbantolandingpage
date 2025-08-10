@@ -146,7 +146,7 @@ const PricingSection = () => {
                 </div>
 
                 <a
-                  href={plan.name === "Enterprise" ? "#contact" : "https://app.skillbanto.org/creator-registration"}
+                  href={plan.name === "Enterprise" ? "#contact" : "https://app.skillbanto.com/creator-registration"}
                   className={`block w-full py-3 px-4 rounded-md text-center font-medium mb-8 ${
                     plan.popular
                       ? 'bg-primary text-white hover:bg-primary/90'

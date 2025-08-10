@@ -160,7 +160,7 @@ const CTASection = () => {
 
             {/* CTA Button */}
             <a 
-              href="https://app.skillbanto.org/creator-registration"
+                              href="https://app.skillbanto.com/creator-registration"
               className="inline-block"
               onClick={() => {playSuccess(); trackFacebookEvent('StartFreeTrial', { source: 'cta_section' })}} // Added Facebook Pixel tracking
             >

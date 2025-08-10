@@ -572,7 +572,7 @@ export default function CaseStudyDetailPage() {
               </p>
               <div className="flex justify-center">
                 <a
-                  href="https://app.skillbanto.org/creator-registration"
+                  href="https://app.skillbanto.com/creator-registration"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"

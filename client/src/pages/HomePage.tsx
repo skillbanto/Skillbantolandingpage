@@ -138,7 +138,7 @@ export default function HomePage() {
                   className="flex flex-col sm:flex-row gap-4 items-start"
                 >
                   <a 
-                    href="https://app.skillbanto.org/creator-registration"
+                    href="https://app.skillbanto.com/creator-registration"
                     className="bg-emerald-400 hover:bg-emerald-500 text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:scale-105 flex items-center gap-2"
                     onClick={() => {
                       try {
@@ -911,7 +911,7 @@ export default function HomePage() {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
                 <motion.a
-                  href="https://app.skillbanto.org/creator-registration"
+                  href="https://app.skillbanto.com/creator-registration"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:bg-green-50"
