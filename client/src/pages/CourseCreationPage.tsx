@@ -95,6 +95,8 @@ export default function CourseCreationPage() {
               >
                 <a 
                   href="https://app.skillbanto.com/creator-registration"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
                 >
                   Start Creating Courses
@@ -292,6 +294,8 @@ export default function CourseCreationPage() {
 
               <motion.a
                 href="https://app.skillbanto.com/creator-registration"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

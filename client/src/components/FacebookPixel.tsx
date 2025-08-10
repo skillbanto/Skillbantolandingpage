@@ -20,7 +20,7 @@ const FacebookPixel: React.FC<FacebookPixelProps> = ({ pixelId }) => {
       return;
     }
     
-    // Initialize Facebook Pixel with proper type safety
+    // Initialize Facebook Pixel with proper type safety and ad blocker handling
     if (typeof window !== 'undefined') {
       const script = document.createElement('script');
       script.async = true;
@@ -52,6 +52,22 @@ const FacebookPixel: React.FC<FacebookPixelProps> = ({ pixelId }) => {
         
         // Track page view on initial load
         window.fbq('track', 'PageView');
+        
+        console.log('[Meta Pixel] - Successfully initialized');
+      };
+      
+      script.onerror = () => {
+        console.warn('[Meta Pixel] - Failed to load Facebook Pixel script (likely blocked by ad blocker)');
+        // Fallback: Store events locally for later processing
+        if (!window.fbq) {
+          window.fbq = {
+            queue: [],
+            track: function(eventName: string, params?: any) {
+              this.queue.push({ event: eventName, params, timestamp: Date.now() });
+              console.log(`[Meta Pixel Fallback] - Event: ${eventName}`, params);
+            }
+          };
+        }
       };
       
       document.head.appendChild(script);
@@ -74,16 +90,30 @@ const FacebookPixel: React.FC<FacebookPixelProps> = ({ pixelId }) => {
   return null;
 };
 
-// Helper functions to track specific events
+// Helper functions to track specific events with fallback
 export const trackFacebookEvent = (eventName: string, params?: object) => {
-  if (window.fbq) {
-    window.fbq('track', eventName, params);
+  try {
+    if (window.fbq) {
+      window.fbq('track', eventName, params);
+    } else {
+      // Fallback tracking for when Facebook Pixel is blocked
+      console.log(`[Analytics] - Event: ${eventName}`, params);
+    }
+  } catch (error) {
+    console.warn(`[Analytics] - Failed to track event: ${eventName}`, error);
   }
 };
 
 export const trackFacebookCustomEvent = (eventName: string, params?: object) => {
-  if (window.fbq) {
-    window.fbq('trackCustom', eventName, params);
+  try {
+    if (window.fbq) {
+      window.fbq('trackCustom', eventName, params);
+    } else {
+      // Fallback tracking for when Facebook Pixel is blocked
+      console.log(`[Analytics] - Custom Event: ${eventName}`, params);
+    }
+  } catch (error) {
+    console.warn(`[Analytics] - Failed to track custom event: ${eventName}`, error);
   }
 };
 

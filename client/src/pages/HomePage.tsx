@@ -139,6 +139,8 @@ export default function HomePage() {
                 >
                   <a 
                     href="https://app.skillbanto.com/creator-registration"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-emerald-400 hover:bg-emerald-500 text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200 hover:scale-105 flex items-center gap-2"
                     onClick={() => {
                       try {

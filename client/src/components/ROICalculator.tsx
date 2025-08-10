@@ -238,9 +238,11 @@ const ROICalculator = ({ variant = 'home' }: ROICalculatorProps) => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <a
-                  href="https://app.skillbanto.com/creator-registration"
-                  className="block w-full bg-white text-emerald-600 text-center py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                                  <a
+                    href="https://app.skillbanto.com/creator-registration"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-white text-emerald-600 text-center py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Building Your Revenue
                 </a>

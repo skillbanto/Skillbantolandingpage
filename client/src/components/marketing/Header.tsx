@@ -212,12 +212,16 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
           <div className="hidden md:flex items-center space-x-3">
             <a
               href="https://app.skillbanto.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-base font-medium text-gray-700 hover:text-primary transition-colors px-4 py-2"
             >
               Login
             </a>
             <a
               href="https://app.skillbanto.com/creator-registration"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-primary to-indigo-600 text-white rounded-full px-6 py-2.5 text-base font-medium hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 flex items-center gap-2"
             >
               Get Started
@@ -320,8 +324,10 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
                     key={item.label}
                     href={item.href}
                     onClick={(e) => {
-                      if (sectionId) scrollToSection(e, sectionId);
-                      else e.preventDefault();
+                      if (sectionId) {
+                        scrollToSection(e, sectionId);
+                      }
+                      // Don't prevent default for external links
                     }}
                     className="text-base font-medium text-gray-900 hover:text-primary"
                   >
@@ -334,11 +340,13 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
             <hr />
 
             <div className="flex flex-col space-y-4">
-              <a href="https://app.skillbanto.com/login" className="text-base font-medium text-gray-900 hover:text-primary">
+              <a href="https://app.skillbanto.com/login" target="_blank" rel="noopener noreferrer" className="text-base font-medium text-gray-900 hover:text-primary">
                 Login
               </a>
               <a 
                 href="https://app.skillbanto.com/creator-registration"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-primary to-indigo-600 text-white rounded-full px-6 py-2.5 text-base font-medium hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 text-center flex items-center justify-center gap-2"
               >
                 Get Started
