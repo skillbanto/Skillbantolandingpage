@@ -182,7 +182,7 @@ const PricingSection = () => {
         { text: "Basic analytics", included: true },
         { text: "Student management", included: true },
         { text: "Email support", included: true },
-        { text: "Practical Training", included: false },
+        { text: "Skillbanto Partner Program", included: false },
         { text: "3-Day Free Trial", included: true },
       ],
       ctaText: "Start Free Trial",
@@ -211,7 +211,7 @@ const PricingSection = () => {
       mostValue: false
     },
     {
-      title: "Elite Training + 3 Month Premium Plan",
+      title: "3 Months Premium Bundle Plan",
       description: "For established educators with high-volume sales",
       price: "9,000",
       period: "/3 months",
@@ -222,10 +222,10 @@ const PricingSection = () => {
         { text: "Advanced analytics", included: true },
         { text: "Student management", included: true },
         { text: "Priority support", included: true },
-        { text: "Practical Training", included: true },
+        { text: "Skillbanto Partner Program", included: true },
         { text: "Marketing tools", included: true },
       ],
-      ctaText: "Get Most Value",
+      ctaText: "Get Started",
       popular: false,
       includesPracticalTraining: true,
       mostValue: true

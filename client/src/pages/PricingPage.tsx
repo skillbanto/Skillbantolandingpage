@@ -40,19 +40,19 @@ const pricingPlans: PricingPlan[] = [
       { text: "Basic analytics", included: true },
       { text: "Student management", included: true },
       { text: "Email support", included: true },
-      { text: "Practical Training", included: false }
+      { text: "Skillbanto Partner Program", included: false }
     ]
   },
   {
     id: "elite",
-    name: "Elite Training + 3 Month Premium Plan",
+    name: "3 Months Premium Bundle Plan",
     description: "For established educators with high-volume sales",
     price: "PKR 9,000",
     period: "/3 months",
     badge: "MOST VALUE",
     badgeColor: "bg-white text-purple-600",
-    buttonText: "Current Plan",
-    buttonColor: "bg-purple-300 text-purple-600 cursor-not-allowed",
+    buttonText: "Get Started",
+    buttonColor: "bg-white text-purple-600 hover:bg-gray-100",
     bgColor: "bg-purple-500",
     textColor: "text-white",
     features: [
@@ -62,10 +62,10 @@ const pricingPlans: PricingPlan[] = [
       { text: "Advanced analytics", included: true },
       { text: "Student management", included: true },
       { text: "Priority support", included: true },
-      { text: "Practical Training", included: true },
+      { text: "Skillbanto Partner Program", included: true },
       { text: "Marketing tools", included: true }
     ],
-    highlights: ["Practical Training Included"]
+    highlights: ["Skillbanto Partner Program"]
   }
 ];
 
@@ -199,7 +199,7 @@ export default function PricingPage() {
                     <p className="text-green-100 mt-2">PKR 5,000</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold">Elite Training + 3 Month Premium</h3>
+                    <h3 className="text-2xl font-bold">3 Months Premium Bundle</h3>
                     <p className="text-green-100 mt-2">PKR 9,000/3 months</p>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export default function PricingPage() {
                   { feature: "Analytics", basic: "Basic", elite: "Advanced" },
                   { feature: "Student Management", basic: "✓", elite: "✓" },
                   { feature: "Support", basic: "Email", elite: "Priority" },
-                  { feature: "Practical Training", basic: "✗", elite: "✓" },
+                  { feature: "Skillbanto Partner Program", basic: "✗", elite: "✓" },
                   { feature: "Marketing Tools", basic: "✗", elite: "✓" },
                   { feature: "Duration", basic: "Monthly", elite: "3 Months" }
                 ].map((row, index) => (
@@ -307,8 +307,8 @@ export default function PricingPage() {
                   answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle."
                 },
                 {
-                  question: "What's included in Practical Training?",
-                  answer: "Practical Training includes hands-on projects, real-world scenarios, personalized feedback, and one-on-one guidance from industry experts."
+                  question: "What's included in Skillbanto Partner Program?",
+                  answer: "Skillbanto Partner Program includes exclusive partnership opportunities, advanced marketing resources, priority support, and special revenue sharing benefits."
                 },
                 {
                   question: "Do you offer refunds?",
