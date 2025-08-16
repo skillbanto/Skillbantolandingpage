@@ -123,7 +123,7 @@ const DynamicRevenueCounter = ({ initialValue = 649368137 }: DynamicRevenueCount
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">50k+</div>
+              <div className="text-3xl md:text-4xl font-bold">250k+</div>
               <div className="text-blue-200 mt-2">Active Creators</div>
             </div>
             <div className="text-center">
