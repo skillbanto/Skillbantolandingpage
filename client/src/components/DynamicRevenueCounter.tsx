@@ -131,7 +131,7 @@ const DynamicRevenueCounter = ({ initialValue = 649368137 }: DynamicRevenueCount
               <div className="text-blue-200 mt-2">Students Enrolled</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">34k+</div>
+              <div className="text-3xl md:text-4xl font-bold">2K</div>
               <div className="text-blue-200 mt-2">Courses Created</div>
             </div>
           </div>
