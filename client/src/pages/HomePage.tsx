@@ -266,11 +266,11 @@ export default function HomePage() {
                   <div className="text-pink-200 text-sm md:text-base">Active Creators</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">50k+</div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">250k+</div>
                   <div className="text-pink-200 text-sm md:text-base">Students Enrolled</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">34k+</div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">2K</div>
                   <div className="text-pink-200 text-sm md:text-base">Courses Created</div>
                 </div>
               </div>
