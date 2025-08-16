@@ -103,9 +103,9 @@ const teamMembers: TeamMember[] = [
 
 const stats = [
   { number: "2.7K+", label: "Active Creators" },
-  { number: "75M+", label: "Students Served" },
-  { number: "34K+", label: "Courses Published" },
-  { number: "1000+", label: "Success Stories" }
+  { number: "250K+", label: "Students Served" },
+  { number: "2K", label: "Courses Published" },
+  { number: "15+", label: "Success Stories" }
 ];
 
 export default function AboutPage() {

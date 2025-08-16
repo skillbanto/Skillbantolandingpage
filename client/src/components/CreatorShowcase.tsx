@@ -69,19 +69,19 @@ const stats: Stat[] = [
   },
   {
     id: 2,
-    value: "34K+",
+    value: "2K",
     description: "COURSES PUBLISHED",
     color: "pink"
   },
   {
     id: 3,
-    value: "75M+",
+    value: "250K+",
     description: "CUSTOMERS SERVED BY OUR CREATORS",
     color: "blue"
   },
   {
     id: 4,
-    value: "1000+",
+    value: "15+",
     description: "MILLIONAIRES MINTED BY SKILLBANTO",
     color: "purple"
   }
