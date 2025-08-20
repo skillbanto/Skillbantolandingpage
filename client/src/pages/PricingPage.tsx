@@ -49,7 +49,7 @@ const pricingPlans: PricingPlan[] = [
     id: "elite",
     name: "3 Months Premium Bundle Plan",
     description: "For established educators with high-volume sales",
-    price: "PKR 9,000",
+    price: "PKR 12,000",
     period: "/3 months",
     badge: "POPULAR",
     badgeColor: "bg-white text-purple-600",
@@ -230,7 +230,7 @@ export default function PricingPage() {
                   </div>
                   <div className="text-center">
                     <h3 className="text-xl font-bold">3 Months Bundle</h3>
-                    <p className="text-green-100 mt-2">PKR 9,000/3 months</p>
+                    <p className="text-green-100 mt-2">PKR 12,000/3 months</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-xl font-bold">Annual Plan</h3>

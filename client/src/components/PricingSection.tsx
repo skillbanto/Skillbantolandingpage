@@ -215,7 +215,7 @@ const PricingSection = () => {
     {
       title: "3 Months Premium Bundle Plan",
       description: "For established educators with high-volume sales",
-      price: "9,000",
+      price: "12,000",
       period: "/3 months",
       features: [
         { text: "Up to 5 Courses", included: true },
