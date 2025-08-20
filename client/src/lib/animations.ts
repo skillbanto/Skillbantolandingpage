@@ -158,21 +158,26 @@ export const setupScrollAnimations = () => {
     
     smoothLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
+        const href = (link as HTMLAnchorElement).getAttribute('href');
         
-        const targetId = (link as HTMLAnchorElement).getAttribute('href');
-        const targetElement = document.querySelector(targetId!);
-        
-        if (targetElement) {
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: {
-              y: targetElement,
-              offsetY: 100
-            },
-            ease: "power3.inOut"
-          });
+        // Only prevent default for internal links (starting with #)
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          
+          const targetElement = document.querySelector(href);
+          
+          if (targetElement) {
+            gsap.to(window, {
+              duration: 1,
+              scrollTo: {
+                y: targetElement,
+                offsetY: 100
+              },
+              ease: "power3.inOut"
+            });
+          }
         }
+        // Allow external links to work normally
       });
     });
   };

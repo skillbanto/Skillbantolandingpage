@@ -117,12 +117,11 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`rounded-2xl overflow-hidden animate slide-up ${
+              className={`rounded-2xl overflow-hidden ${
                 plan.popular
                   ? 'border-2 border-primary shadow-xl relative'
                   : 'border border-gray-200 shadow-md'
               }`}
-              style={{ animationDelay: `${0.1 + index * 0.1}s` }}
             >
               {plan.popular && (
                 <div className="bg-primary text-white text-center text-sm font-medium py-1">
@@ -147,7 +146,20 @@ const PricingSection = () => {
 
                 <a
                   href={plan.name === "Enterprise" ? "#contact" : "https://app.skillbanto.com/creator-registration"}
-                  className={`block w-full py-3 px-4 rounded-md text-center font-medium mb-8 ${
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    console.log('Pricing link clicked:', plan.name, e.currentTarget.href);
+                    if (plan.name === "Enterprise") {
+                      e.preventDefault();
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }
+                  }}
+                  style={{ position: 'relative', zIndex: 10 }}
+                  className={`block w-full py-3 px-4 rounded-md text-center font-medium mb-8 cursor-pointer ${
                     plan.popular
                       ? 'bg-primary text-white hover:bg-primary/90'
                       : 'bg-white text-primary border border-primary hover:bg-primary/5'

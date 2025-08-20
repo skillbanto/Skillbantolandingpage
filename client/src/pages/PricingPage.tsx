@@ -179,14 +179,16 @@ export default function PricingPage() {
                   </div>
 
                   {/* CTA Button */}
-                  <motion.button
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${plan.buttonColor}`}
+                  <motion.a
+                    href="https://app.skillbanto.com/creator-registration"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full py-3 px-6 rounded-lg font-semibold transition-colors ${plan.buttonColor} cursor-pointer`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    disabled={plan.buttonText === "Current Plan"}
                   >
                     {plan.buttonText}
-                  </motion.button>
+                  </motion.a>
                 </motion.div>
               ))}
             </div>
@@ -306,22 +308,28 @@ export default function PricingPage() {
                     <p className="text-gray-600">Choose the plan that fits your goals</p>
                   </div>
                   <div className="text-center">
-                    <motion.button
-                      className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                    <motion.a
+                      href="https://app.skillbanto.com/creator-registration"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors cursor-pointer"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       Get Basic Plan
-                    </motion.button>
+                    </motion.a>
                   </div>
                   <div className="text-center">
-                    <motion.button
-                      className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                    <motion.a
+                      href="https://app.skillbanto.com/creator-registration"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors cursor-pointer"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       Get Elite Plan
-                    </motion.button>
+                    </motion.a>
                   </div>
                 </div>
               </div>
