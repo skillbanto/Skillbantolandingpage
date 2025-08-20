@@ -226,6 +226,26 @@ const PricingSection = () => {
         { text: "Marketing tools", included: true },
       ],
       ctaText: "Get Started",
+      popular: true,
+      includesPracticalTraining: true,
+      mostValue: false
+    },
+    {
+      title: "Annual Premium Plan",
+      description: "Best value for serious course creators - Save 63%!",
+      price: "40,000",
+      period: "/12 months",
+      features: [
+        { text: "Up to 5 Courses", included: true },
+        { text: "4 Live Sessions per month", included: true },
+        { text: "Unlimited Students", included: true },
+        { text: "Advanced analytics", included: true },
+        { text: "Student management", included: true },
+        { text: "Priority support", included: true },
+        { text: "Skillbanto Partner Program", included: true },
+        { text: "Marketing tools", included: true },
+      ],
+      ctaText: "Get Started",
       popular: false,
       includesPracticalTraining: true,
       mostValue: true

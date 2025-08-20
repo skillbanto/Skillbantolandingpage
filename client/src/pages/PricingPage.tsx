@@ -49,7 +49,7 @@ const pricingPlans: PricingPlan[] = [
     description: "For established educators with high-volume sales",
     price: "PKR 9,000",
     period: "/3 months",
-    badge: "MOST VALUE",
+    badge: "POPULAR",
     badgeColor: "bg-white text-purple-600",
     buttonText: "Get Started",
     buttonColor: "bg-white text-purple-600 hover:bg-gray-100",
@@ -66,6 +66,30 @@ const pricingPlans: PricingPlan[] = [
       { text: "Marketing tools", included: true }
     ],
     highlights: ["Skillbanto Partner Program"]
+  },
+  {
+    id: "annual",
+    name: "Annual Premium Plan",
+    description: "Best value for serious course creators - Save 63%!",
+    price: "PKR 40,000",
+    period: "/12 months",
+    badge: "BEST VALUE",
+    badgeColor: "bg-white text-green-600",
+    buttonText: "Get Started",
+    buttonColor: "bg-white text-green-600 hover:bg-gray-100",
+    bgColor: "bg-green-600",
+    textColor: "text-white",
+    features: [
+      { text: "Up to 5 Courses", included: true },
+      { text: "4 Live Sessions per month", included: true },
+      { text: "Unlimited Students", included: true },
+      { text: "Advanced analytics", included: true },
+      { text: "Student management", included: true },
+      { text: "Priority support", included: true },
+      { text: "Skillbanto Partner Program", included: true },
+      { text: "Marketing tools", included: true }
+    ],
+    highlights: ["63% Discount", "Best Annual Value"]
   }
 ];
 
@@ -92,7 +116,7 @@ export default function PricingPage() {
             </motion.div>
 
             {/* Pricing Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={plan.id}
@@ -190,17 +214,21 @@ export default function PricingPage() {
             >
               {/* Table Header */}
               <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-8">
-                <div className="grid grid-cols-3 gap-6 items-center">
+                <div className="grid grid-cols-4 gap-6 items-center">
                   <div>
                     <h3 className="text-2xl font-bold">Features</h3>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold">Basic Plan</h3>
+                    <h3 className="text-xl font-bold">Basic Plan</h3>
                     <p className="text-green-100 mt-2">PKR 5,000</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold">3 Months Premium Bundle</h3>
+                    <h3 className="text-xl font-bold">3 Months Bundle</h3>
                     <p className="text-green-100 mt-2">PKR 9,000/3 months</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold">Annual Plan</h3>
+                    <p className="text-green-100 mt-2">PKR 40,000/12 months</p>
                   </div>
                 </div>
               </div>
@@ -208,19 +236,20 @@ export default function PricingPage() {
               {/* Comparison Features */}
               <div className="divide-y divide-gray-100">
                 {[
-                  { feature: "Number of Courses", basic: "Up to 2", elite: "Up to 5" },
-                  { feature: "Live Sessions", basic: "2 per month", elite: "4 per month" },
-                  { feature: "Students", basic: "Unlimited", elite: "Unlimited" },
-                  { feature: "Analytics", basic: "Basic", elite: "Advanced" },
-                  { feature: "Student Management", basic: "✓", elite: "✓" },
-                  { feature: "Support", basic: "Email", elite: "Priority" },
-                  { feature: "Skillbanto Partner Program", basic: "✗", elite: "✓" },
-                  { feature: "Marketing Tools", basic: "✗", elite: "✓" },
-                  { feature: "Duration", basic: "Monthly", elite: "3 Months" }
+                  { feature: "Number of Courses", basic: "Up to 2", elite: "Up to 5", annual: "Up to 5" },
+                  { feature: "Live Sessions", basic: "2 per month", elite: "4 per month", annual: "4 per month" },
+                  { feature: "Students", basic: "Unlimited", elite: "Unlimited", annual: "Unlimited" },
+                  { feature: "Analytics", basic: "Basic", elite: "Advanced", annual: "Advanced" },
+                  { feature: "Student Management", basic: "✓", elite: "✓", annual: "✓" },
+                  { feature: "Support", basic: "Email", elite: "Priority", annual: "Priority" },
+                  { feature: "Skillbanto Partner Program", basic: "✗", elite: "✓", annual: "✓" },
+                  { feature: "Marketing Tools", basic: "✗", elite: "✓", annual: "✓" },
+                  { feature: "Duration", basic: "Monthly", elite: "3 Months", annual: "12 Months" },
+                  { feature: "Discount", basic: "None", elite: "None", annual: "63% Off" }
                 ].map((row, index) => (
                   <motion.div
                     key={index}
-                    className="grid grid-cols-3 gap-6 p-6 hover:bg-gray-50 transition-colors"
+                    className="grid grid-cols-4 gap-6 p-6 hover:bg-gray-50 transition-colors"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -245,6 +274,16 @@ export default function PricingPage() {
                         "bg-purple-100 text-purple-800"
                       }`}>
                         {row.elite}
+                      </span>
+                    </div>
+                    <div className="text-center">
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                        row.annual === "✓" ? "bg-green-100 text-green-800" :
+                        row.annual === "✗" ? "bg-red-100 text-red-800" :
+                        row.annual === "63% Off" ? "bg-yellow-100 text-yellow-800" :
+                        "bg-green-100 text-green-800"
+                      }`}>
+                        {row.annual}
                       </span>
                     </div>
                   </motion.div>
