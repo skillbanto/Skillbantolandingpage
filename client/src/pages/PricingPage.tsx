@@ -40,7 +40,9 @@ const pricingPlans: PricingPlan[] = [
       { text: "Basic analytics", included: true },
       { text: "Student management", included: true },
       { text: "Email support", included: true },
-      { text: "Skillbanto Partner Program", included: false }
+      { text: "Skillbanto Partner Program", included: false },
+      { text: "Website Builder", included: false },
+      { text: "Custom Domain", included: false }
     ]
   },
   {
@@ -63,7 +65,9 @@ const pricingPlans: PricingPlan[] = [
       { text: "Student management", included: true },
       { text: "Priority support", included: true },
       { text: "Skillbanto Partner Program", included: true },
-      { text: "Marketing tools", included: true }
+      { text: "Marketing tools", included: true },
+      { text: "Website Builder", included: true },
+      { text: "Custom Domain", included: true }
     ],
     highlights: ["Skillbanto Partner Program"]
   },
@@ -87,7 +91,9 @@ const pricingPlans: PricingPlan[] = [
       { text: "Student management", included: true },
       { text: "Priority support", included: true },
       { text: "Skillbanto Partner Program", included: true },
-      { text: "Marketing tools", included: true }
+      { text: "Marketing tools", included: true },
+      { text: "Website Builder", included: true },
+      { text: "Custom Domain", included: true }
     ],
     highlights: ["63% Discount", "Best Annual Value"]
   }
@@ -244,6 +250,8 @@ export default function PricingPage() {
                   { feature: "Support", basic: "Email", elite: "Priority", annual: "Priority" },
                   { feature: "Skillbanto Partner Program", basic: "✗", elite: "✓", annual: "✓" },
                   { feature: "Marketing Tools", basic: "✗", elite: "✓", annual: "✓" },
+                  { feature: "Website Builder", basic: "✗", elite: "✓", annual: "✓" },
+                  { feature: "Custom Domain", basic: "✗", elite: "✓", annual: "✓" },
                   { feature: "Duration", basic: "Monthly", elite: "3 Months", annual: "12 Months" },
                   { feature: "Discount", basic: "None", elite: "None", annual: "63% Off" }
                 ].map((row, index) => (
