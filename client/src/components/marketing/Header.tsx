@@ -11,7 +11,6 @@ interface HeaderProps {
 // Main navigation items
 const mainNavItems = [
   { label: "Products", href: "/products", hasDropdown: true },
-  { label: "About", href: "/about" },
   { label: "Resources", href: "/resources", hasDropdown: true },
   { label: "Pricing", href: "/pricing" }
 ];
@@ -169,16 +168,6 @@ const Header = ({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) => {
                       </div>
                     </div>
                   </div>
-                );
-              } else if (item.label === "About") {
-                return (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className={`text-base font-medium text-gray-700 hover:text-primary transition-colors px-1 py-2`}
-                  >
-                    {item.label}
-                  </Link>
                 );
               } else if (item.label === "Pricing") {
                 return (

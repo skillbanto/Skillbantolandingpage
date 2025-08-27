@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FacebookPixel from "./components/FacebookPixel";
 import ErrorBoundary from "./components/ErrorBoundary";
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
+
 import PricingPage from "./pages/PricingPage";
 import ProductsPage from "./pages/ProductsPage";
 import ResourcesPage from "./pages/ResourcesPage";
@@ -44,7 +44,6 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/products/course-creation" element={<CourseCreationPage />} />

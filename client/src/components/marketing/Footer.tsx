@@ -144,11 +144,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-white mb-6">Company</h3>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">About Us</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">Careers</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">Press</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">Partners</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">Contact Us</Link></li>
+              <li><a href="mailto:contact@skillbanto.com" className="text-gray-300 hover:text-green-400 transition-colors">Contact Us</a></li>
+              <li><a href="https://app.skillbanto.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors">App</a></li>
             </ul>
           </div>
         </div>
